@@ -1,0 +1,10 @@
+{
+    "advertisement": {
+        "minimumDelayBetweenInterstitial": 60,
+        "interstitial": {
+            "preloadOnStart": "level_completed",
+            "placementFallback": "level_completed",
+            "placements": [ { "id": "level_completed" }, { "id": "game_over" } ]
+        }
+    }
+}
