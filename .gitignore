@@ -1,0 +1,12 @@
+# local-only: other platform builds, documents, covers, test material
+/crazygames-build/
+/doodle-shield/
+/fan-rush/
+/fullscreen-build/
+/playgama-build/
+/playgama-fullscreen-build/
+/youtube-playables/source/
+/youtube-playables/thumbnails/
+/youtube-playables/FORM_ANSWERS.md
+/youtube-playables/metadata.md
+/youtube-playables/SUBMISSION_CHECKLIST.md
