@@ -350,7 +350,7 @@ try{if(yt&&yt.system&&yt.system.getLanguage)Promise.resolve(yt.system.getLanguag
 // lifecycle
 addEventListener('error',e=>{try{yt&&yt.health&&yt.health.logError()}catch(_){}});
 function pause(v){paused=v;if(actx)try{v?actx.suspend():!muted&&actx.resume()}catch(e){}}
-try{if(yt&&yt.system){yt.system.onPause(()=>pause(true));yt.system.onResume(()=>pause(false));muted=!yt.system.isAudioEnabled();yt.system.onAudioEnabledChange(on=>{muted=!on;if(actx)try{muted?actx.suspend():actx.resume()}catch(e){}})}}catch(e){}
+try{if(yt&&yt.system&&yt.IN_PLAYABLES_ENV!==false){yt.system.onPause(()=>pause(true));yt.system.onResume(()=>pause(false));muted=!yt.system.isAudioEnabled();yt.system.onAudioEnabledChange(on=>{muted=!on;if(actx)try{muted?actx.suspend():actx.resume()}catch(e){}})}}catch(e){}
 if(!yt)document.addEventListener('visibilitychange',()=>pause(document.hidden));
 ['pointerdown','touchend','keydown','click'].forEach(ev=>addEventListener(ev,()=>{try{audio()}catch(e){}},{passive:true}));
 let last=performance.now(),ff=false;L=gen(level);
